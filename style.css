@@ -1,0 +1,361 @@
+/* The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px */
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+/* font-family: 'Overpass', sans-serif */
+/* font-family: 'Ubuntu', sans-serif; */
+
+:root {
+  /* Primary */
+  --light-red: hsl(356, 100%, 66%);
+  --very-light-red: hsl(355, 100%, 74%);
+  --very-dark-blue: hsl(208, 49%, 24%);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%); /* text */
+  --grayish-blue: hsl(240, 2%, 79%); /* footer text */
+  --very-dark-grayish-blue: hsl(207, 13%, 34%); /* body copy */
+  --very-dark-black-blue: hsl(240, 10%, 16%); /* footer background */
+
+  /* ### Gradient */
+
+  /* Background gradient - Intro/CTA mobile nav: */
+
+  --very-light-red: hsl(13, 100%, 72%);
+  --light-red: hsl(353, 100%, 62%);
+
+  /* Background gradient - body: */
+
+  --very-dark-gray-blue: hsl(237, 17%, 21%);
+  --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  background-color: #ffffff;
+  font-family: 'Overpass', sans-serif;
+  overflow-x: hidden;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 75%;
+  margin: auto;
+}
+/* header */
+
+header {
+  background-color: var(--very-light-red);
+  background-image: linear-gradient(
+    to right,
+    var(--very-light-red),
+    var(--light-red)
+  );
+  border-radius: 0 0 0 100px;
+  height: 70vh;
+}
+
+.showcase-img {
+  height: 70vh;
+  background-image: url('./images/bg-pattern-intro.svg');
+  background-position: center left -150px;
+  background-size: 2500px;
+  background-repeat: no-repeat;
+  /* position: absolute; */
+}
+
+/* Navbar */
+nav {
+  padding-top: 2rem;
+  z-index: 1;
+}
+
+.nav-flex {
+  display: flex;
+}
+
+.nav-flex-left {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-flex-left a {
+  width: 40%;
+}
+
+.nav-flex-left ul {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+
+.nav-flex-left select {
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.nav-flex-left select:focus option {
+  color: rgba(0, 0, 0, 0.8);
+
+  /* color: yellow; */
+}
+
+.nav-flex-right {
+  width: 50%;
+}
+
+.nav-flex-right ul {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  align-items: center;
+}
+
+.nav-flex-right ul li {
+  padding-right: 2rem;
+}
+
+.nav-flex-right ul li:nth-child(2) a {
+  background-color: #ffffff;
+  padding: 1rem 2.5rem 0.8rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  color: var(--light-red);
+}
+
+.nav-flex-right ul li:nth-child(2) a:hover {
+  background-color: var(--light-red);
+  color: #ffffff;
+}
+
+/* Showcase */
+.showcase-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.showcase-flex h1 {
+  font-size: 50px;
+  margin-bottom: 1rem;
+}
+
+.showcase-flex span {
+  margin-bottom: 2rem;
+}
+
+.showcase-buttons a:first-child {
+  background-color: #ffffff;
+  padding: 1rem 2.2rem 0.8rem 2.2rem;
+  border-radius: 50px;
+  color: var(--light-red);
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+.showcase-buttons a:first-child:hover {
+  background-color: var(--light-red);
+  color: #ffffff;
+}
+
+.showcase-buttons a:last-child {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  padding: 1rem 2.2rem 0.8rem 2.2rem;
+  border-radius: 50px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.showcase-buttons a:last-child:hover {
+  background-color: #ffffff;
+  color: var(--light-red);
+}
+
+/* future */
+.future {
+  margin-top: 5rem;
+}
+
+.future > h1 {
+  /* display: flex;
+  justify-content: center; */
+  position: absolute;
+  font-size: 40px;
+  /* margin-bottom: 2rem; */
+  left: 35%;
+}
+
+.future-flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.future-flex-left {
+  width: 50%;
+  padding-right: 2rem;
+  line-height: 2;
+}
+
+.future-flex-left .first-para {
+  margin-bottom: 1rem;
+}
+
+.future-flex-left h1 {
+  font-size: 30px;
+}
+
+.future-flex-left p {
+  font-size: 15px;
+  padding: 1rem 0;
+}
+
+.future-flex-right {
+  width: 50%;
+}
+
+/* Art */
+.art {
+  background-image: linear-gradient(
+    to right,
+    var(--very-dark-gray-blue),
+    var(--very-dark-desaturated-blue)
+  );
+
+  border-radius: 0 90px 0 90px;
+  height: 60vh;
+}
+.art-img {
+  background-image: url('./images/bg-pattern-circles.svg');
+  background-repeat: no-repeat;
+  height: 60vh;
+  background-position: top -500px left -300px;
+}
+
+.art-flex {
+  height: 60vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.art-flex-left {
+  width: 50%;
+  position: relative;
+  left: -5%;
+}
+
+.art-flex-right {
+  width: 50%;
+  color: #ffffff;
+  margin: auto;
+  display: block;
+  padding-left: 4rem;
+}
+
+.art-flex-right h1 {
+  font-size: 32px;
+  padding-bottom: 1rem;
+}
+
+.art-flex-right p {
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* Section 3 */
+.section-3-flex {
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.section-3-flex-left {
+  width: 50%;
+}
+
+.section-3-flex-right {
+  width: 50%;
+  padding-left: 2rem;
+}
+
+.section-3-img {
+  position: relative;
+  left: -90%;
+}
+
+.section-3-flex-right h1 {
+  font-size: 32px;
+}
+
+.section-3-flex-right p {
+  font-size: 15px;
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+/* Footer */
+
+footer {
+  background-color: var(--very-dark-black-blue);
+  border-radius: 0 100px 0 0;
+  color: #ffffff;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 0;
+  height: 50vh;
+}
+
+.footer-flex ul {
+  width: 25%;
+}
+
+.footer-flex h3 {
+  padding-bottom: 2rem;
+}
+
+.footer-flex li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-flex a {
+  color: var(--grayish-blue);
+}
+
+.footer-flex a:hover {
+  text-decoration: underline;
+}
